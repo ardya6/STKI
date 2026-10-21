@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dataset Resep Masakan</title>
+</head>
+<body>
+    <h1>Dataset Resep Masakan</h1>
+
+    <p>Jumlah resep: {{ jumlah }}</p>
+
+    {% for resep in data %}
+        <article>
+            {% for kolom in kolom %}
+                <p>
+                    <strong>{{ kolom }}:</strong>
+                    {{ resep[kolom] }}
+                </p>
+            {% endfor %}
+            <hr>
+        </article>
+    {% endfor %}
+</body>
+</html>
